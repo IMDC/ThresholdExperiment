@@ -148,10 +148,13 @@ namespace ChairExperiment
 
             subjectWindow start = new subjectWindow();
             administratorWindow admin = new administratorWindow();
+            CalibrationForm calibration = new CalibrationForm();
 
             start.link(mysqlConnection, ID, admin);
             start.Show();
 
+           // calibration.link(mysqlConnection, ID, admin);
+            calibration.Show();
             //Array screens = System.Windows.Forms.Screen.AllScreens();
 
 

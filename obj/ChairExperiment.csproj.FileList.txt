@@ -30,3 +30,4 @@ obj\Debug\ChairExperiment.subjectWindow.resources
 bin\Debug\AudioLabBasicVCL.dll
 bin\Debug\AudioLabVCL.dll
 bin\Debug\SignalLabVCL.dll
+obj\Debug\ChairExperiment.CalibrationForm.resources
