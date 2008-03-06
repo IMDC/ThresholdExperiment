@@ -174,6 +174,11 @@ namespace ChairExperiment
         {
             this.signalGen1.Stop();
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            this.textBoxAmp.Text = Convert.ToString((Convert.ToDouble(this.trackBar1.Value) / 1000.00));
+        }
         
 
 
