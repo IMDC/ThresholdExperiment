@@ -1,0 +1,158 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{180C5A36-44C4-4755-BE74-93ECC851F3F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChairExperiment</RootNamespace>
+    <AssemblyName>ChairExperiment</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AudioLab, Version=3.1.2857.15678, Culture=neutral, PublicKeyToken=e5f079ac440fbda0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\LabPacks\DotNET\Bin\AudioLab.dll</HintPath>
+    </Reference>
+    <Reference Include="AudioLabBasic, Version=3.1.2857.15567, Culture=neutral, PublicKeyToken=d6082b20afed4658, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\LabPacks\DotNET\Bin\AudioLabBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="AudioLabBasicVCL, Version=3.1.2857.15497, Culture=neutral, PublicKeyToken=1ebb090761d9c5df, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\LabPacks\DotNET\Bin\AudioLabBasicVCL.dll</HintPath>
+    </Reference>
+    <Reference Include="AudioLabVCL, Version=3.1.2857.15647, Culture=neutral, PublicKeyToken=6ba64c0c78481bbd, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\LabPacks\DotNET\Bin\AudioLabVCL.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectShowLib-2005, Version=2.0.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Odbc, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="PlotLabBasic, Version=3.1.2857.15474, Culture=neutral, PublicKeyToken=1bb0b8a97236ac2e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\LabPacks\DotNET\Bin\PlotLabBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="PlotLabBasicVCL, Version=3.1.2857.15468, Culture=neutral, PublicKeyToken=2d5c36a8ef0a5e08, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\LabPacks\DotNET\Bin\PlotLabBasicVCL.dll</HintPath>
+    </Reference>
+    <Reference Include="SignalLab, Version=3.1.2857.15736, Culture=neutral, PublicKeyToken=0f7dd317c9b1aa3e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\LabPacks\DotNET\Bin\SignalLab.dll</HintPath>
+    </Reference>
+    <Reference Include="SignalLabBasic, Version=3.1.2857.15463, Culture=neutral, PublicKeyToken=0b44e28582c522cf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\LabPacks\DotNET\Bin\SignalLabBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="SignalLabBasicVCL, Version=3.1.2857.15456, Culture=neutral, PublicKeyToken=b6e90591977fb7c8, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\LabPacks\DotNET\Bin\SignalLabBasicVCL.dll</HintPath>
+    </Reference>
+    <Reference Include="SignalLabVCL, Version=3.1.2857.15714, Culture=neutral, PublicKeyToken=f24d491913a02d70, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\LabPacks\DotNET\Bin\SignalLabVCL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="administratorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administratorWindow.Designer.cs">
+      <DependentUpon>administratorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalibrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalibrationForm.designer.cs">
+      <DependentUpon>CalibrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateTonesSampleGrabber.cs" />
+    <Compile Include="IProgressCallback.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="administratorWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>administratorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalibrationForm.resx">
+      <DependentUpon>CalibrationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subjectWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>subjectWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="subjectWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subjectWindow.Designer.cs">
+      <DependentUpon>subjectWindow.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
