@@ -31,7 +31,10 @@ namespace ChairExperiment
         static double startingFrequency = 27.5;
         double frequency = startingFrequency;
 
-        const double twentyforthrootoftwo = 1.02930224;
+        //const double twentyforthrootoftwo = 1.02930224;
+        //const double twelfthrootoftwo = 1.05946309;
+
+        const double twentyforthrootoftwo = 1.05946309;
         const double arrayOffset = 0.5;
 
         double anchorStimuli = 0.0;
@@ -41,6 +44,7 @@ namespace ChairExperiment
         int secondStimuliPointer = 0;
 
         double amplifierCoefficient = 2;
+        double comparisonamplifierCoefficient = 2;
 
         ListViewItem tempItem;
 
@@ -60,14 +64,14 @@ namespace ChairExperiment
             this.signalGen1.Stop();
 
   
-            //anchorFrequencies.Add(32.7032);//C1
+           // anchorFrequencies.Add(32.7032);//C1
             //anchorFrequencies.Add(46.2493);//F#1
 
             anchorFrequencies.Add(65.4064);//C2
-            anchorFrequencies.Add(92.4986);//F#2
+           anchorFrequencies.Add(92.4986);//F#2
 
-            anchorFrequencies.Add(130.813);//C3
-            anchorFrequencies.Add(184.997);//F#3
+           anchorFrequencies.Add(130.813);//C3
+           anchorFrequencies.Add(184.997);//F#3
 
             anchorFrequencies.Add(261.626);//C4
             anchorFrequencies.Add(369.994);//F#4
@@ -107,7 +111,7 @@ namespace ChairExperiment
 
             this.comparisonStimuli = (double)testFrequencies[localSession];
 
-            
+           // getNewAnchor();
         }
 
 
@@ -128,6 +132,7 @@ namespace ChairExperiment
             anchor++;
             localSession = 0;
             correctHigh = 0;
+            correctLow = 0;
 
 
 
@@ -148,12 +153,12 @@ namespace ChairExperiment
 
             double previousStimuli = 0;
             double nextStimuli = 0;
-
+            //firstHalfComplete = true;
             if (firstHalfComplete)
             {
                 nextStimuli = anchorStimuli / twentyforthrootoftwo;
 
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 20; i++)
                 {
 
                     testFrequencies.Add(nextStimuli);
@@ -161,7 +166,7 @@ namespace ChairExperiment
                 }
 
                 previousStimuli = anchorStimuli * twentyforthrootoftwo;
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 5; i++)
                 {
 
                     testFrequencies.Insert(0, previousStimuli);
@@ -180,7 +185,7 @@ namespace ChairExperiment
                 }
 
                 nextStimuli = anchorStimuli * twentyforthrootoftwo;
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 20; i++)
                 {
 
                     testFrequencies.Add(nextStimuli);
@@ -247,7 +252,7 @@ namespace ChairExperiment
 
             this.buttonPlay1.Enabled = true;
 
-            correctHigh = 0;
+            //correctHigh = 0;
 
             if (anchorStimuli > comparisonStimuli && anchorStimuli != comparisonStimuli && firstHalfComplete)
             {
@@ -302,7 +307,7 @@ namespace ChairExperiment
             this.admin.labelSessionNumber.Text = "Session " + session;
 
 
-            correctLow = 0;
+            //correctLow = 0;
             if (anchorStimuli < comparisonStimuli && anchorStimuli != comparisonStimuli && !firstHalfComplete)
             {
                 correctHigh++;
@@ -313,7 +318,16 @@ namespace ChairExperiment
                 }
             }
 
-            comparisonStimuli = (double)testFrequencies[localSession];
+            try
+            {
+                comparisonStimuli = (double)testFrequencies[localSession];
+            }
+            catch (Exception ex)
+            {
+                getNewAnchor();
+            }
+            
+            
 
             this.admin.textBoxFirstArrayPos.Text = firstStimuliPointer.ToString();
             this.admin.textBoxSecondArrayPos.Text = secondStimuliPointer.ToString();
@@ -374,6 +388,43 @@ namespace ChairExperiment
                 this.amplifierCoefficient = 1.9;
             }
 
+            if (this.comparisonStimuli <= 65.4064)
+            {
+                this.comparisonamplifierCoefficient = 0.006;
+            }
+            if (this.comparisonStimuli > 65.4064 && this.comparisonStimuli <= 92.49)
+            {
+                this.comparisonamplifierCoefficient = 0.0095;
+            }
+            if (this.comparisonStimuli > 92.49 && this.comparisonStimuli <= 130.913)
+            {
+                this.comparisonamplifierCoefficient = 0.011;
+            }
+            if (this.comparisonStimuli > 130.913 && this.comparisonStimuli <= 184.997)
+            {
+                this.comparisonamplifierCoefficient = 0.015;
+            }
+            if (this.comparisonStimuli > 184.997 && this.comparisonStimuli <= 261.626)
+            {
+                this.comparisonamplifierCoefficient = 0.0225;
+            }
+            if (this.comparisonStimuli > 261.626 && this.comparisonStimuli <= 369.994)
+            {
+                this.comparisonamplifierCoefficient = 0.0425;
+            }
+            if (this.comparisonStimuli > 369.994 && this.comparisonStimuli <= 523.251)
+            {
+                this.comparisonamplifierCoefficient = 0.0625;
+            }
+            if (this.comparisonStimuli > 523.251 && this.comparisonStimuli <= 739.989)
+            {
+                this.comparisonamplifierCoefficient = 1.725;
+            }
+            if (this.comparisonStimuli > 739.989 && this.comparisonStimuli <= 1046.5)
+            {
+                this.comparisonamplifierCoefficient = 1.9;
+            }
+            //amplifierCoefficient = 1.0;
 
             this.admin.textBoxAmpCo.Text = this.amplifierCoefficient.ToString();
 
@@ -425,6 +476,8 @@ namespace ChairExperiment
             {
                 this.signalGen1.Stop();
                 this.signalGen1.Frequency = this.comparisonStimuli;
+                this.amplifier1.Coefficient = this.comparisonamplifierCoefficient;
+
                 this.label1.ForeColor = Color.Black;
                 this.label2.ForeColor = Color.Black;
 

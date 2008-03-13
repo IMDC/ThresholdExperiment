@@ -159,7 +159,7 @@ namespace ChairExperiment
            
             //calibration.link(start);
 
-            // calibration.Show();
+           calibration.Show();
             //Array screens = System.Windows.Forms.Screen.AllScreens();
 
 
