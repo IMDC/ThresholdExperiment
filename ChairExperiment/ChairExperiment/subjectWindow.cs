@@ -68,10 +68,10 @@ namespace ChairExperiment
             //anchorFrequencies.Add(46.2493);//F#1
 
             anchorFrequencies.Add(65.4064);//C2
-           anchorFrequencies.Add(92.4986);//F#2
+            anchorFrequencies.Add(92.4986);//F#2
 
-           anchorFrequencies.Add(130.813);//C3
-           anchorFrequencies.Add(184.997);//F#3
+            anchorFrequencies.Add(130.813);//C3
+            anchorFrequencies.Add(184.997);//F#3
 
             anchorFrequencies.Add(261.626);//C4
             anchorFrequencies.Add(369.994);//F#4
@@ -353,76 +353,126 @@ namespace ChairExperiment
 
             if (this.anchorStimuli <= 65.4064)
             {
-                this.amplifierCoefficient = 0.006;
+                //this.amplifierCoefficient = 0.006;
+                //y = 0.009x                                               
+                this.amplifierCoefficient = ((0.009 * this.anchorStimuli)) / 100;
+                
             }
             if (this.anchorStimuli > 65.4064 && this.anchorStimuli <= 92.49)
             {
-                this.amplifierCoefficient = 0.0095;
+                //this.amplifierCoefficient = 0.0095;
+                //y = (0.012x-0.245)/100                                                
+                this.amplifierCoefficient = ((0.012 * this.anchorStimuli) - 0.245) / 100;
+                
             }
             if (this.anchorStimuli > 92.49 && this.anchorStimuli <= 130.913)
             {
-                this.amplifierCoefficient = 0.011;
+                //this.amplifierCoefficient = 0.011;
+                //y=0.003x+0.588               
+                this.amplifierCoefficient = ((0.003 * this.anchorStimuli) + 0.588) / 100;
+                
+
             }
             if (this.anchorStimuli > 130.913 && this.anchorStimuli <= 184.997)
             {
-                this.amplifierCoefficient = 0.015;
+                //this.amplifierCoefficient = 0.015;
+                //y=0.007x+0.131                
+                this.amplifierCoefficient = ((0.007 * this.anchorStimuli) + 0.131) / 100;
+                
             }
             if (this.anchorStimuli > 184.997 && this.anchorStimuli <= 261.626)
             {
-                this.amplifierCoefficient = 0.0225;
+                //this.amplifierCoefficient = 0.0225;
+                //y=0.009x-0.310               
+                this.amplifierCoefficient = ((0.009 * this.anchorStimuli) - 0.310) / 100;
+                
             }
             if (this.anchorStimuli > 261.626 && this.anchorStimuli <= 369.994)
             {
-                this.amplifierCoefficient = 0.0425;
+                //this.amplifierCoefficient = 0.0425;
+                //y=0.018x-2.578                
+                this.amplifierCoefficient = ((0.018 * this.anchorStimuli) - 2.578) / 100;
+                
             }
             if (this.anchorStimuli > 369.994 && this.anchorStimuli <= 523.251)
             {
-                this.amplifierCoefficient = 0.0625;
+                //this.amplifierCoefficient = 0.0625;
+                //y=0.013x-0.578                
+                this.amplifierCoefficient = ((0.013 * this.anchorStimuli) - 0.578) / 100;
+                
             }
             if (this.anchorStimuli > 523.251 && this.anchorStimuli <= 739.989)
             {
-                this.amplifierCoefficient = 1.725;
+                //this.amplifierCoefficient = 1.725;
+                //y=0.767x-395.1                
+                this.amplifierCoefficient = ((0.767 * this.anchorStimuli) - 395.1) / 100;
             }
             if (this.anchorStimuli > 739.989 && this.anchorStimuli <= 1046.5)
             {
-                this.amplifierCoefficient = 1.9;
+                //this.amplifierCoefficient = 1.9;
+                //y=0.057x+130.2                
+                this.amplifierCoefficient = ((0.057 * this.anchorStimuli) + 130.2) / 100;
             }
+
+
+
+
+
+
 
             if (this.comparisonStimuli <= 65.4064)
             {
-                this.comparisonamplifierCoefficient = 0.006;
+                //this.comparisonamplifierCoefficient = 0.006;
+                //y = 0.009x                                               
+                this.comparisonamplifierCoefficient = ((0.009 * this.comparisonStimuli)) / 100;
             }
             if (this.comparisonStimuli > 65.4064 && this.comparisonStimuli <= 92.49)
             {
-                this.comparisonamplifierCoefficient = 0.0095;
+                //this.comparisonamplifierCoefficient = 0.0095;
+                //y = (0.012x-0.245)/100                                                
+                this.comparisonamplifierCoefficient = ((0.012 * this.comparisonStimuli) - 0.245) / 100;
             }
             if (this.comparisonStimuli > 92.49 && this.comparisonStimuli <= 130.913)
             {
-                this.comparisonamplifierCoefficient = 0.011;
+                //this.comparisonamplifierCoefficient = 0.011;
+                //y=0.003x+0.588               
+                this.comparisonamplifierCoefficient = ((0.003 * this.comparisonStimuli) + 0.588) / 100;
             }
             if (this.comparisonStimuli > 130.913 && this.comparisonStimuli <= 184.997)
             {
-                this.comparisonamplifierCoefficient = 0.015;
+                //this.comparisonamplifierCoefficient = 0.015;
+                //y=0.007x+0.131                
+                this.comparisonamplifierCoefficient = ((0.007 * this.comparisonStimuli) + 0.131) / 100;
             }
             if (this.comparisonStimuli > 184.997 && this.comparisonStimuli <= 261.626)
             {
-                this.comparisonamplifierCoefficient = 0.0225;
+                //this.comparisonamplifierCoefficient = 0.0225;
+                //y=0.009x-0.310               
+                this.comparisonamplifierCoefficient = ((0.009 * this.comparisonStimuli) - 0.310) / 100;
             }
             if (this.comparisonStimuli > 261.626 && this.comparisonStimuli <= 369.994)
             {
-                this.comparisonamplifierCoefficient = 0.0425;
+                //this.comparisonamplifierCoefficient = 0.0425;
+                //y=0.018x-2.578                
+                this.comparisonamplifierCoefficient = ((0.018 * this.comparisonStimuli) - 2.578) / 100;
             }
             if (this.comparisonStimuli > 369.994 && this.comparisonStimuli <= 523.251)
             {
-                this.comparisonamplifierCoefficient = 0.0625;
+                //this.comparisonamplifierCoefficient = 0.0625;
+                //y=0.013x-0.578                
+                this.comparisonamplifierCoefficient = ((0.013 * this.comparisonStimuli) - 0.578) / 100;
             }
             if (this.comparisonStimuli > 523.251 && this.comparisonStimuli <= 739.989)
             {
-                this.comparisonamplifierCoefficient = 1.725;
+                //this.comparisonamplifierCoefficient = 1.725;
+                //y=0.767x-395.1                
+                this.comparisonamplifierCoefficient = ((0.767 * this.comparisonStimuli) - 395.1) / 100;
             }
             if (this.comparisonStimuli > 739.989 && this.comparisonStimuli <= 1046.5)
             {
-                this.comparisonamplifierCoefficient = 1.9;
+                //this.comparisonamplifierCoefficient = 1.9;
+                //y=0.057x+130.2                
+                this.comparisonamplifierCoefficient = ((0.057 * this.comparisonStimuli) + 130.2) / 100;
             }
             //amplifierCoefficient = 1.0;
 
