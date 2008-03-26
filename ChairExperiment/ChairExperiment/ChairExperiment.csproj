@@ -90,6 +90,12 @@
     <Compile Include="administratorWindow.Designer.cs">
       <DependentUpon>administratorWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="BreakTimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BreakTimer.Designer.cs">
+      <DependentUpon>BreakTimer.cs</DependentUpon>
+    </Compile>
     <Compile Include="CalibrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,10 @@
     <EmbeddedResource Include="administratorWindow.resx">
       <SubType>Designer</SubType>
       <DependentUpon>administratorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BreakTimer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BreakTimer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CalibrationForm.resx">
       <DependentUpon>CalibrationForm.cs</DependentUpon>

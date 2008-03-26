@@ -20,7 +20,7 @@ namespace ChairExperiment
 
         private OdbcConnection mysqlConnection;
         int ID;
-        int session = 1;
+        int session = 149;
         const double e = 2.71828183;
 
         administratorWindow admin;
@@ -263,7 +263,7 @@ namespace ChairExperiment
                     getNewAnchor();
                 }
             }
-
+            checkBreak();
         }
         
         private void buttonFaster_Click(object sender, EventArgs e)
@@ -340,9 +340,23 @@ namespace ChairExperiment
             this.buttonSlower.Enabled = false;
 
             this.buttonPlay1.Enabled = true;
+            checkBreak();
 
         }
+        private void checkBreak()
+        {
+            if (this.session % 50 == 0)
+            {
+                BreakTimer breaktimer = new BreakTimer();                
+                breaktimer.Left = this.Left;
+                breaktimer.Show();
 
+                breaktimer.labelMessage.Text = "You have completed " + this.session.ToString() + " sessions. Please rest for 2 minutes.";
+                breaktimer.startTimer(this);
+                this.Enabled = false;
+                
+            }
+        }
         private void buttonPlay1_Click(object sender, EventArgs e)
         {
 

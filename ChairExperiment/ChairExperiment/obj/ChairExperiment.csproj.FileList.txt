@@ -31,3 +31,4 @@ bin\Debug\AudioLabBasicVCL.dll
 bin\Debug\AudioLabVCL.dll
 bin\Debug\SignalLabVCL.dll
 obj\Debug\ChairExperiment.CalibrationForm.resources
+obj\Debug\ChairExperiment.BreakTimer.resources
