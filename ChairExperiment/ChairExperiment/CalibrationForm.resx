@@ -117,4 +117,290 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="channelMerger1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>875, 22</value>
+  </metadata>
+  <data name="pinList1.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAQAAAAGBAAAAB9AQ2FsaWJyYXRp
+        b25Gb3JtLmNoYW5uZWxNZXJnZXIxBgUAAAAkQ2FsaWJyYXRpb25Gb3JtLmFtcGxpZmllcjEuT3V0cHV0
+        UGluBgYAAAAfQENhbGlicmF0aW9uRm9ybS5jaGFubmVsTWVyZ2VyMQYHAAAAJENhbGlicmF0aW9uRm9y
+        bS5hbXBsaWZpZXIyLk91dHB1dFBpbgs=
+</value>
+  </data>
+  <data name="channelMerger1.InternalData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABFWY2wuVmNs
+        QmluYXJ5RGF0YQAAAAACAAAACw==
+</value>
+  </data>
+  <data name="sourcePin1.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAIAAAAGBAAAAB9AQ2FsaWJyYXRp
+        b25Gb3JtLmNoYW5uZWxNZXJnZXIxBgUAAAAkQ2FsaWJyYXRpb25Gb3JtLmRzQXVkaW9PdXQxLklucHV0
+        UGluCw==
+</value>
+  </data>
+  <metadata name="signalGen1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1006, 22</value>
+  </metadata>
+  <data name="sinkPin1.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAEAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLnNpZ25hbEdlbjEL
+</value>
+  </data>
+  <data name="statePin1.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAEAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLnNpZ25hbEdlbjEL
+</value>
+  </data>
+  <data name="statePin2.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAEAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLnNpZ25hbEdlbjEL
+</value>
+  </data>
+  <data name="sourcePin2.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAIAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLnNpZ25hbEdlbjEGBQAAACNDYWxpYnJhdGlvbkZvcm0uYW1wbGlmaWVyMS5JbnB1dFBpbgs=
+</value>
+  </data>
+  <metadata name="audioToReal1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 21</value>
+  </metadata>
+  <data name="sinkPin2.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAEAAAAGBAAAAB1AQ2FsaWJyYXRp
+        b25Gb3JtLmF1ZGlvVG9SZWFsMQs=
+</value>
+  </data>
+  <data name="pinList2.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAIAAAAGBAAAAB1AQ2FsaWJyYXRp
+        b25Gb3JtLmF1ZGlvVG9SZWFsMQYFAAAAHUBDYWxpYnJhdGlvbkZvcm0uYXVkaW9Ub1JlYWwxCw==
+</value>
+  </data>
+  <metadata name="dsAudioOut1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>266, 21</value>
+  </metadata>
+  <data name="dsAudioOutputDevice1.InternalData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABFWY2wuVmNs
+        QmluYXJ5RGF0YQAAAAACAAAACw==
+</value>
+  </data>
+  <data name="statePin3.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAEAAAAGBAAAABxAQ2FsaWJyYXRp
+        b25Gb3JtLmRzQXVkaW9PdXQxCw==
+</value>
+  </data>
+  <data name="sinkPin3.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAIAAAAGBAAAABxAQ2FsaWJyYXRp
+        b25Gb3JtLmRzQXVkaW9PdXQxBgUAAAAoQ2FsaWJyYXRpb25Gb3JtLmNoYW5uZWxNZXJnZXIxLk91dHB1
+        dFBpbgs=
+</value>
+  </data>
+  <data name="dsAudioOut1.InternalData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABFWY2wuVmNs
+        QmluYXJ5RGF0YQAAAAACAAAACw==
+</value>
+  </data>
+  <metadata name="systemMixer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>381, 21</value>
+  </metadata>
+  <data name="pinList3.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAAAAAAL
+</value>
+  </data>
+  <data name="pinList4.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAAAAAAL
+</value>
+  </data>
+  <data name="pinList5.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAAAAAAL
+</value>
+  </data>
+  <data name="pinList6.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAAAAAAL
+</value>
+  </data>
+  <data name="pinList7.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAAAAAAL
+</value>
+  </data>
+  <data name="pinList8.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAAAAAAL
+</value>
+  </data>
+  <data name="pinList9.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAAAAAAL
+</value>
+  </data>
+  <data name="pinList10.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAAAAAAL
+</value>
+  </data>
+  <metadata name="amplifier1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>500, 21</value>
+  </metadata>
+  <data name="sinkPin4.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAEAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLmFtcGxpZmllcjEL
+</value>
+  </data>
+  <data name="sinkPin5.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAIAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLmFtcGxpZmllcjEGBQAAACRDYWxpYnJhdGlvbkZvcm0uc2lnbmFsR2VuMS5PdXRwdXRQaW4L
+</value>
+  </data>
+  <data name="amplifier1.InternalData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABFWY2wuVmNs
+        QmluYXJ5RGF0YQEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAcAAAAAhBDb2VmZmljaWVudFZhbHVlBQAA
+        AAAAAACAAEAL
+</value>
+  </data>
+  <data name="sourcePin3.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAIAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLmFtcGxpZmllcjEGBQAAACpDYWxpYnJhdGlvbkZvcm0uY2hhbm5lbE1lcmdlcjEuSW5wdXRQ
+        aW5zLjAL
+</value>
+  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>601, 21</value>
+  </metadata>
+  <metadata name="signalGen2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>684, 21</value>
+  </metadata>
+  <data name="sinkPin6.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAEAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLnNpZ25hbEdlbjIL
+</value>
+  </data>
+  <data name="statePin4.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAEAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLnNpZ25hbEdlbjIL
+</value>
+  </data>
+  <data name="statePin5.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAEAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLnNpZ25hbEdlbjIL
+</value>
+  </data>
+  <data name="sourcePin4.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAIAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLnNpZ25hbEdlbjIGBQAAACNDYWxpYnJhdGlvbkZvcm0uYW1wbGlmaWVyMi5JbnB1dFBpbgs=
+</value>
+  </data>
+  <metadata name="amplifier2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>790, 21</value>
+  </metadata>
+  <data name="sinkPin7.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAEAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLmFtcGxpZmllcjIL
+</value>
+  </data>
+  <data name="sinkPin8.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAIAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLmFtcGxpZmllcjIGBQAAACRDYWxpYnJhdGlvbkZvcm0uc2lnbmFsR2VuMi5PdXRwdXRQaW4L
+</value>
+  </data>
+  <data name="amplifier2.InternalData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABFWY2wuVmNs
+        QmluYXJ5RGF0YQEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAcAAAAAhBDb2VmZmljaWVudFZhbHVlBQAA
+        AAAAAACA/z8L
+</value>
+  </data>
+  <data name="sourcePin5.ConnectionData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFRTaWduYWxMYWJCYXNpY1ZDTCwgVmVyc2lvbj00LjAuMS4wLCBD
+        dWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI2ZTkwNTkxOTc3ZmI3YzgFAQAAABdPcGVuV2ly
+        ZS5QaW5Db25uZWN0aW9ucwEAAAAERGF0YQYCAAAACQMAAAARAwAAAAIAAAAGBAAAABtAQ2FsaWJyYXRp
+        b25Gb3JtLmFtcGxpZmllcjIGBQAAACpDYWxpYnJhdGlvbkZvcm0uY2hhbm5lbE1lcmdlcjEuSW5wdXRQ
+        aW5zLjEL
+</value>
+  </data>
 </root>

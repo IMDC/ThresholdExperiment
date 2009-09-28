@@ -24,7 +24,7 @@ namespace ChairExperiment
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            string sex = "";
+            /*string sex = "";
             string age = "";
             string computer = "";
             string handedness = "";
@@ -101,7 +101,7 @@ namespace ChairExperiment
             {
                 speakerside = "Right";
             }
-
+            /*
             string server = "DRIVER={MySQL ODBC 3.51 Driver};" + "SERVER=141.117.145.50;" + "DATABASE=livedescribe;" + "UID=livedescribe;" + "PWD=livedescribe;" + "OPTION=3;";// builder.ConnectionString;
 
             string sql = "INSERT INTO `chairexperiment`.`subjects` (`ID`  ,`sex` ,`age`,`experience`, `handedness`, `speakerside`) VALUES (NULL , '" + sex + "', '" + age + "', '" + computer + "', '" + handedness + "', '" + speakerside + "')";
@@ -145,16 +145,20 @@ namespace ChairExperiment
             
 
             this.Hide();
-
+             */
+            int ID = 0; //DELETE THIS
             subjectWindow start = new subjectWindow();
             administratorWindow admin = new administratorWindow();
             CalibrationForm calibrate = new CalibrationForm();
 
-            calibrate.Show();
+            calibrate.linkForms(start);
+
+            //calibrate.Show();
            // calibrate.link(start);
             start.link(mysqlConnection, ID, admin);
             start.Show();
-
+            calibrate.Show();
+           
             //Array screens = System.Windows.Forms.Screen.AllScreens();
 
 

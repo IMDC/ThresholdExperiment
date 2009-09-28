@@ -60,6 +60,7 @@ namespace ChairExperiment
         int anchor = 0;
 
         int correctHigh = 0;
+        public Form internalForm;
 
         public CalibrationForm()
         {
@@ -116,7 +117,12 @@ namespace ChairExperiment
 
 
         }
-   
+           public void linkForms(Form formtolink)
+        {
+            this.internalForm = formtolink;
+
+           
+        }
 
        /* public void link(subjectWindow subject)
         {
@@ -141,24 +147,87 @@ namespace ChairExperiment
             this.amplifierCoefficient = Convert.ToDouble(this.textBoxAmp.Text);
             this.signalGen2.Frequency = Convert.ToDouble(this.textBoxFreq.Text);
             this.amplifier2.Coefficient = this.amplifierCoefficient;
-            Mitov.AudioLab.AudioFormat audioFormat1 = new Mitov.AudioLab.AudioFormat();
+            Mitov.AudioLab.AudioFormat audioFormat1 = new Mitov.AudioLab.AudioFormat();oh
 
             this.signalGen2.Start();*/
         }
 
-        private void CalibrationForm_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //this.signalGen2.Stop();
+            //signalGen1.Stop();
+            //signalGen2.Stop();
+
+            //((System.ComponentModel.ISupportInitialize)(this.dsAudioOut1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.channelMerger1)).EndInit();
+
+            this.signalGen1.Frequency = 0;//anchorStimuli;
+            this.signalGen2.Frequency = 0;//anchorStimuli;
+            //this.signalGen2.Frequency = 369.995;//anchorStimuli;
+            //this.signalGen1.Frequency = 369.995;//anchorStimuli;
+
+
+
+            this.amplifier1.Coefficient = 1;//this.amplifierCoefficient;
+            //Mitov.AudioLab.AudioFormat audioFormat1 = new Mitov.AudioLab.AudioFormat();
+
+
+
+            try
+            {
+                this.signalGen1.Start();
+                this.signalGen2.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("hey");
+            }
+            
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            this.textBoxAmp.Text = Convert.ToString((Convert.ToDouble(this.trackBar1.Value) / 1000.00));
+            this.textBoxAmp.Text = Convert.ToString((Convert.ToDouble(this.trackBar1.Value)));
+            this.signalGen1.Amplitude = Convert.ToInt16((Convert.ToDouble(this.trackBar1.Value)));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+
+            
+        {
+            ((System.ComponentModel.ISupportInitialize)(this.channelMerger1)).EndInit();
+
+            this.signalGen2.Frequency = Convert.ToDouble(textBoxFreq1.Text);//130.813;//anchorStimuli;
+            this.signalGen1.Frequency = Convert.ToDouble(textBoxFreq2.Text);//369.995;//anchorStimuli;
+
+
+            this.amplifier1.Coefficient = 1;//this.amplifierCoefficient;
+            this.amplifier2.Coefficient = 1;
+
+            try
+            {
+                this.signalGen1.Start();
+                this.signalGen2.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("hey");
+            }
+
+        }
+
+        private void CalibrationForm_Load(object sender, EventArgs e)
+        {
+            textBoxFreq1.Text = "130.819";
+            textBoxFreq2.Text = "261.628";
+            textBoxAmp.Text = Convert.ToString(this.signalGen1.Amplitude);
+            textboxamp2.Text = Convert.ToString(this.signalGen2.Amplitude);
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            this.textboxamp2.Text = Convert.ToString((Convert.ToDouble(this.trackBar2.Value)));
+            this.signalGen2.Amplitude = Convert.ToInt16((Convert.ToDouble(this.trackBar2.Value)));
         }
         
 

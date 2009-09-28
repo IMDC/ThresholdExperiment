@@ -15,6 +15,7 @@ using System.Collections;
 
 namespace ChairExperiment
 {
+    
     public partial class subjectWindow : Form
     {
 
@@ -56,6 +57,14 @@ namespace ChairExperiment
         int correctLow = 0;
 
         bool firstHalfComplete = false;
+
+
+        int freq1;
+        int freq2; // bring it over from calibration form. use setter methods.
+        int ampl1; // 0-32500
+        int ampl2;
+
+        Form internalForm;
 
         public subjectWindow()
         {
@@ -113,6 +122,7 @@ namespace ChairExperiment
 
            // getNewAnchor();
         }
+
 
 
         public void link(OdbcConnection mysqlConnection, int ID, administratorWindow admin)
@@ -359,153 +369,33 @@ namespace ChairExperiment
         }
         private void buttonPlay1_Click(object sender, EventArgs e)
         {
+           // signalGen1.Stop();
+           // signalGen2.Stop();
 
-            this.admin.textBoxFirstFreq.Text = anchorStimuli.ToString();//frequencies[firstStimuliPointer].ToString();
-            this.admin.textBoxSecondFreq.Text = comparisonStimuli.ToString();//frequencies[secondStimuliPointer].ToString();
-            //add this last minute to avoid playing before play is pressed
-            ((System.ComponentModel.ISupportInitialize)(this.dsAudioOut1)).EndInit();
-
-            if (this.anchorStimuli <= 65.4064)
-            {
-                //this.amplifierCoefficient = 0.006;
-                //y = 0.009x                                               
-                this.amplifierCoefficient = ((0.009 * this.anchorStimuli)) / 100;
-                
-            }
-            if (this.anchorStimuli > 65.4064 && this.anchorStimuli <= 92.49)
-            {
-                //this.amplifierCoefficient = 0.0095;
-                //y = (0.012x-0.245)/100                                                
-                this.amplifierCoefficient = ((0.012 * this.anchorStimuli) - 0.245) / 100;
-                
-            }
-            if (this.anchorStimuli > 92.49 && this.anchorStimuli <= 130.913)
-            {
-                //this.amplifierCoefficient = 0.011;
-                //y=0.003x+0.588               
-                this.amplifierCoefficient = ((0.003 * this.anchorStimuli) + 0.588) / 100;
-                
-
-            }
-            if (this.anchorStimuli > 130.913 && this.anchorStimuli <= 184.997)
-            {
-                //this.amplifierCoefficient = 0.015;
-                //y=0.007x+0.131                
-                this.amplifierCoefficient = ((0.007 * this.anchorStimuli) + 0.131) / 100;
-                
-            }
-            if (this.anchorStimuli > 184.997 && this.anchorStimuli <= 261.626)
-            {
-                //this.amplifierCoefficient = 0.0225;
-                //y=0.009x-0.310               
-                this.amplifierCoefficient = ((0.009 * this.anchorStimuli) - 0.310) / 100;
-                
-            }
-            if (this.anchorStimuli > 261.626 && this.anchorStimuli <= 369.994)
-            {
-                //this.amplifierCoefficient = 0.0425;
-                //y=0.018x-2.578                
-                this.amplifierCoefficient = ((0.018 * this.anchorStimuli) - 2.578) / 100;
-                
-            }
-            if (this.anchorStimuli > 369.994 && this.anchorStimuli <= 523.251)
-            {
-                //this.amplifierCoefficient = 0.0625;
-                //y=0.013x-0.578                
-                this.amplifierCoefficient = ((0.013 * this.anchorStimuli) - 0.578) / 100;
-                
-            }
-            if (this.anchorStimuli > 523.251 && this.anchorStimuli <= 739.989)
-            {
-                //this.amplifierCoefficient = 1.725;
-                //y=0.767x-395.1                
-                this.amplifierCoefficient = ((0.767 * this.anchorStimuli) - 395.1) / 100;
-            }
-            if (this.anchorStimuli > 739.989 && this.anchorStimuli <= 1046.5)
-            {
-                //this.amplifierCoefficient = 1.9;
-                //y=0.057x+130.2                
-                this.amplifierCoefficient = ((0.057 * this.anchorStimuli) + 130.2) / 100;
-            }
+            ((System.ComponentModel.ISupportInitialize)(this.channelMerger1)).EndInit();
+            
+            this.signalGen1.Frequency = 261.626;
+            //this.signalGen2.Frequency = 60;
+            //this.signalGen2.Frequency = 369.995;
+            //this.signalGen1.Frequency = 60;
 
 
-
-
-
-
-
-            if (this.comparisonStimuli <= 65.4064)
-            {
-                //this.comparisonamplifierCoefficient = 0.006;
-                //y = 0.009x                                               
-                this.comparisonamplifierCoefficient = ((0.009 * this.comparisonStimuli)) / 100;
-            }
-            if (this.comparisonStimuli > 65.4064 && this.comparisonStimuli <= 92.49)
-            {
-                //this.comparisonamplifierCoefficient = 0.0095;
-                //y = (0.012x-0.245)/100                                                
-                this.comparisonamplifierCoefficient = ((0.012 * this.comparisonStimuli) - 0.245) / 100;
-            }
-            if (this.comparisonStimuli > 92.49 && this.comparisonStimuli <= 130.913)
-            {
-                //this.comparisonamplifierCoefficient = 0.011;
-                //y=0.003x+0.588               
-                this.comparisonamplifierCoefficient = ((0.003 * this.comparisonStimuli) + 0.588) / 100;
-            }
-            if (this.comparisonStimuli > 130.913 && this.comparisonStimuli <= 184.997)
-            {
-                //this.comparisonamplifierCoefficient = 0.015;
-                //y=0.007x+0.131                
-                this.comparisonamplifierCoefficient = ((0.007 * this.comparisonStimuli) + 0.131) / 100;
-            }
-            if (this.comparisonStimuli > 184.997 && this.comparisonStimuli <= 261.626)
-            {
-                //this.comparisonamplifierCoefficient = 0.0225;
-                //y=0.009x-0.310               
-                this.comparisonamplifierCoefficient = ((0.009 * this.comparisonStimuli) - 0.310) / 100;
-            }
-            if (this.comparisonStimuli > 261.626 && this.comparisonStimuli <= 369.994)
-            {
-                //this.comparisonamplifierCoefficient = 0.0425;
-                //y=0.018x-2.578                
-                this.comparisonamplifierCoefficient = ((0.018 * this.comparisonStimuli) - 2.578) / 100;
-            }
-            if (this.comparisonStimuli > 369.994 && this.comparisonStimuli <= 523.251)
-            {
-                //this.comparisonamplifierCoefficient = 0.0625;
-                //y=0.013x-0.578                
-                this.comparisonamplifierCoefficient = ((0.013 * this.comparisonStimuli) - 0.578) / 100;
-            }
-            if (this.comparisonStimuli > 523.251 && this.comparisonStimuli <= 739.989)
-            {
-                //this.comparisonamplifierCoefficient = 1.725;
-                //y=0.767x-395.1                
-                this.comparisonamplifierCoefficient = ((0.767 * this.comparisonStimuli) - 395.1) / 100;
-            }
-            if (this.comparisonStimuli > 739.989 && this.comparisonStimuli <= 1046.5)
-            {
-                //this.comparisonamplifierCoefficient = 1.9;
-                //y=0.057x+130.2                
-                this.comparisonamplifierCoefficient = ((0.057 * this.comparisonStimuli) + 130.2) / 100;
-            }
-            //amplifierCoefficient = 1.0;
-
-            this.admin.textBoxAmpCo.Text = this.amplifierCoefficient.ToString();
-
-            this.signalGen1.Frequency = anchorStimuli;
-            this.amplifier1.Coefficient = this.amplifierCoefficient;
-            Mitov.AudioLab.AudioFormat audioFormat1 = new Mitov.AudioLab.AudioFormat();
+            this.amplifier1.Coefficient = 1;
+            //this.amplifier2.Coefficient = 1;
+            
             try
             {
                 this.signalGen1.Start();
+                //this.signalGen2.Start();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("hey");
             }
-            this.timer1.Start();
+           // this.timer1.Start();
 
-            this.buttonPlay1.Enabled = false;
+            //this.buttonPlay1.Enabled = false; 
+            //this.buttonPlay2.Enabled = true;
 
 
 
@@ -571,6 +461,90 @@ namespace ChairExperiment
 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            //signalGen1.Stop();
+            //signalGen2.Stop();
+
+            //((System.ComponentModel.ISupportInitialize)(this.dsAudioOut1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.channelMerger1)).EndInit();
+
+            this.signalGen1.Frequency = 369.994;//anchorStimuli;
+            this.signalGen2.Frequency = 130.813;//anchorStimuli;
+            //this.signalGen2.Frequency = 369.995;//anchorStimuli;
+            //this.signalGen1.Frequency = 369.995;//anchorStimuli;
+
+
+
+            this.amplifier1.Coefficient = 1;//this.amplifierCoefficient;
+            this.amplifier2.Coefficient = 1;
+            //Mitov.AudioLab.AudioFormat audioFormat1 = new Mitov.AudioLab.AudioFormat();
+
+
+
+            try
+            {
+                this.signalGen1.Start();
+                this.signalGen2.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("hey");
+            }
+            // this.timer1.Start();
+
+            //this.buttonPlay2.Enabled = false;
+            //this.buttonPlay1.Enabled = true;
+
+
+        }
+
+        private void buttonstop_Click(object sender, EventArgs e)
+        {
+            //signalGen1.Stop();
+            //signalGen2.Stop();
+
+            //((System.ComponentModel.ISupportInitialize)(this.dsAudioOut1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.channelMerger1)).EndInit();
+
+            this.signalGen1.Frequency = 0;//anchorStimuli;
+            this.signalGen2.Frequency = 0;//anchorStimuli;
+            //this.signalGen2.Frequency = 369.995;//anchorStimuli;
+            //this.signalGen1.Frequency = 369.995;//anchorStimuli;
+
+
+
+            this.amplifier1.Coefficient = 1;//this.amplifierCoefficient;
+            //Mitov.AudioLab.AudioFormat audioFormat1 = new Mitov.AudioLab.AudioFormat();
+
+
+
+            try
+            {
+                this.signalGen1.Start();
+                this.signalGen2.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("hey");
+            }
+            
+        }
+
+        public void setfreq1(int freq){
+            freq1 = freq;
+        }
+
+        public void setfreq2(int freq)
+        {
+            freq2 = freq;
+        }
 
 
     }
