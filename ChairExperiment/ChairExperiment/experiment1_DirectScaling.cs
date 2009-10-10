@@ -69,8 +69,8 @@ namespace ChairExperiment
 
         double currentTestFrequency = 0.0;
 
-        double[] comparisonFrequencies = new double[20];
-        double[] subjectiveIntensityValues = new double[20];
+        double[] comparisonFrequencies = new double[11];
+        double[] subjectiveIntensityValues = new double[11];
 
         Random random = new Random(DateTime.UtcNow.Millisecond);
 
@@ -83,35 +83,32 @@ namespace ChairExperiment
             InitializeComponent();
             this.signalGen1.Stop();
 
-            double frequency = 100;
-            for (int i = 0; i < 20; i++)
-            {
-                comparisonFrequencies[i] = 100 + (i * 20);
-            }
-            
-            subjectiveIntensityValues[19] = 1.0;
-            subjectiveIntensityValues[18] = 1.0;
-            subjectiveIntensityValues[17] = 1.0;
-            subjectiveIntensityValues[16] = 0.95;
-            subjectiveIntensityValues[15] = 0.95;
-            subjectiveIntensityValues[14] = 0.95;
-            subjectiveIntensityValues[13] = 0.9;
-            subjectiveIntensityValues[12] = 0.9;
-            subjectiveIntensityValues[11] = 0.9;
-            subjectiveIntensityValues[10] = 0.9;
-            subjectiveIntensityValues[9] = 0.85;
-            subjectiveIntensityValues[8] = 0.85;
-            subjectiveIntensityValues[7] = 0.85;
-            subjectiveIntensityValues[6] = 0.85;
-            subjectiveIntensityValues[5] = 0.8;
-            subjectiveIntensityValues[4] = 0.8;
-            subjectiveIntensityValues[3] = 0.8;
-            subjectiveIntensityValues[2] = 0.7;
-            subjectiveIntensityValues[1] = 0.7;
-            subjectiveIntensityValues[0] = 0.7;
-            
+            comparisonFrequencies[0] = 100;
+            comparisonFrequencies[1] = 140;
+            comparisonFrequencies[2] = 180;
+            comparisonFrequencies[3] = 220;
+            comparisonFrequencies[4] = 260;
+            comparisonFrequencies[5] = 300;
+            comparisonFrequencies[6] = 340;
+            comparisonFrequencies[7] = 380;
+            comparisonFrequencies[8] = 420;
+            comparisonFrequencies[9] = 460;
+            comparisonFrequencies[10] = 500;
 
-            hideAll();
+            subjectiveIntensityValues[0] = 0.75;
+            subjectiveIntensityValues[1] = 0.75;
+            subjectiveIntensityValues[2] = 0.75;
+            subjectiveIntensityValues[3] = 0.8;
+            subjectiveIntensityValues[4] = 1.0;
+            subjectiveIntensityValues[5] = 1.1;
+            subjectiveIntensityValues[6] = 1.1;
+            subjectiveIntensityValues[7] = 1.2;
+            subjectiveIntensityValues[8] = 1.2;
+            subjectiveIntensityValues[9] = 1.3;
+            subjectiveIntensityValues[10] = 1.3;
+
+
+            showAll();
                    
         }
 
@@ -129,7 +126,7 @@ namespace ChairExperiment
             this.admin.labelSessionNumber.Text = "Session " + session;
         }
 
-        private void getNewAnchor()
+        /*private void getNewAnchor()
         {
             anchor++;
             localSession = 0;
@@ -198,7 +195,7 @@ namespace ChairExperiment
 
             this.comparisonStimuli = (double)testFrequencies[localSession];
 
-        }
+        }*/
 
         private void buttonStartVibration_Click(object sender, EventArgs e)
         {
@@ -206,19 +203,9 @@ namespace ChairExperiment
             buttonStartVibration.Enabled = false;
             ((System.ComponentModel.ISupportInitialize)(this.channelMerger1)).EndInit();
             
-            int index = random.Next(0, 20);
+            int index = random.Next(0, 11);
 
-            while(usedStimuli.Contains(index))
-            {
-                index = random.Next(0, 20);
-            }
-
-            usedStimuli.Add(index);
-
-            if (usedStimuli.Count >= 20)
-            {
-                usedStimuli = new ArrayList();
-            }
+           
 
             currentTestFrequency = comparisonFrequencies[index];
 
@@ -349,136 +336,30 @@ namespace ChairExperiment
             freq2 = freq;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency  + "', '1')";
-
-            OdbcCommand command = mysqlConnection.CreateCommand();
-            command.CommandText = sql;
-
-            int hr = command.ExecuteNonQuery();
-
-            nextTrial();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency + "', '2')";
-
-            OdbcCommand command = mysqlConnection.CreateCommand();
-            command.CommandText = sql;
-
-            int hr = command.ExecuteNonQuery();
-
-            nextTrial();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency + "', '3')";
-
-            OdbcCommand command = mysqlConnection.CreateCommand();
-            command.CommandText = sql;
-
-            int hr = command.ExecuteNonQuery();
-
-            nextTrial();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency + "', '4')";
-
-            OdbcCommand command = mysqlConnection.CreateCommand();
-            command.CommandText = sql;
-
-            int hr = command.ExecuteNonQuery();
-
-            nextTrial();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency + "', '5')";
-
-            OdbcCommand command = mysqlConnection.CreateCommand();
-            command.CommandText = sql;
-
-            int hr = command.ExecuteNonQuery();
-
-            nextTrial();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency + "', '6')";
-
-            OdbcCommand command = mysqlConnection.CreateCommand();
-            command.CommandText = sql;
-
-            int hr = command.ExecuteNonQuery();
-
-            nextTrial();
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency + "', '7')";
-
-            OdbcCommand command = mysqlConnection.CreateCommand();
-            command.CommandText = sql;
-
-            int hr = command.ExecuteNonQuery();
-
-            nextTrial();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency + "', '8')";
-
-            OdbcCommand command = mysqlConnection.CreateCommand();
-            command.CommandText = sql;
-
-            int hr = command.ExecuteNonQuery();
-
-            nextTrial();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency + "', '9')";
-
-            OdbcCommand command = mysqlConnection.CreateCommand();
-            command.CommandText = sql;
-
-            int hr = command.ExecuteNonQuery();
-
-            nextTrial();
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency + "', '10')";
-
-            OdbcCommand command = mysqlConnection.CreateCommand();
-            command.CommandText = sql;
-
-            int hr = command.ExecuteNonQuery();
-
-            nextTrial();
-        }
+        
 
         public void nextTrial()
         {
             disableButtons();
             this.buttonStartVibration.Enabled = true;
-            this.textBoxRating.Enabled = false;
+            
             this.buttonAcceptRating.Enabled = false;
-            checkBreak();
+            this.button2.Enabled = false;
+            this.button1.Enabled = false;
+            this.button7.Enabled = false;
+            this.button8.Enabled = false;
+            this.button11.Enabled = false;
+            this.button12.Enabled = false;
+            this.button13.Enabled = false;
+            this.button14.Enabled = false;
+            this.buttonLower.Enabled = false;
+            this.button18.Enabled = false;
+            this.button21.Enabled = false;
+            this.button22.Enabled = false;
+            //checkBreak();
             session++;
             this.labelSession.Text = "Session " + session;
-            this.textBoxRating.Text = "";
+            
 
 
 
@@ -512,18 +393,20 @@ namespace ChairExperiment
         {
             this.labelSession.Visible = true;
             this.buttonStartVibration.Visible = true;
-            this.labelEnterText.Visible = true;
-            this.textBoxRating.Visible = true;
-            this.buttonAcceptRating.Visible = true;
             
-            this.Controls.Remove(this.buttonExampleof2);
-            this.Controls.Remove(this.buttonExampleof8);
+            
+            this.buttonAcceptRating.Visible = true;
+            this.button1.Visible = true;
+            this.button2.Visible = true;
+            
+            //this.Controls.Remove(this.buttonExampleof2);
+            //this.Controls.Remove(this.buttonExampleof8);
         }
 
         private void buttonExampleof2_Click(object sender, EventArgs e)
         {
-            buttonExampleof2.Enabled = false;
-            buttonExampleof8.Enabled = true;
+            //buttonExampleof2.Enabled = false;
+            //buttonExampleof8.Enabled = true;
 
             ((System.ComponentModel.ISupportInitialize)(this.channelMerger1)).EndInit();
 
@@ -556,13 +439,13 @@ namespace ChairExperiment
 
         private void buttonExampleof8_Click(object sender, EventArgs e)
         {
-            buttonExampleof2.Enabled = false;
-            buttonExampleof8.Enabled = false;
+            //buttonExampleof2.Enabled = false;
+            //buttonExampleof8.Enabled = false;
 
             ((System.ComponentModel.ISupportInitialize)(this.channelMerger1)).EndInit();
 
 
-            currentTestFrequency = comparisonFrequencies[18];
+            currentTestFrequency = comparisonFrequencies[8];
 
 
 
@@ -572,7 +455,7 @@ namespace ChairExperiment
 
 
 
-            this.amplifier1.Coefficient = subjectiveIntensityValues[18];
+            this.amplifier1.Coefficient = subjectiveIntensityValues[8];
 
 
             try
@@ -604,8 +487,8 @@ namespace ChairExperiment
 
                 
                 this.buttonStartVibration.Enabled = false;
-                this.textBoxRating.Enabled = true;
-                this.buttonAcceptRating.Enabled = true;
+                
+
                 
                 counter = 0;
 
@@ -649,9 +532,13 @@ namespace ChairExperiment
             }
         }
 
-        private void buttonAcceptRating_Click(object sender, EventArgs e)
+
+
+       
+
+        private void buttonHigher_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`frequency`,`response`) VALUES (NULL , '" + ID + "', '" + currentTestFrequency + "', " + this.textBoxRating.Text + ")";
+            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`anchor`,`frequency`,`response`) VALUES (NULL , '" + ID + "', '200', '" + currentTestFrequency + "', 'HIGHER')";
 
             OdbcCommand command = mysqlConnection.CreateCommand();
             command.CommandText = sql;
@@ -669,6 +556,28 @@ namespace ChairExperiment
         }
 
 
+        private void buttonLower_Click(object sender, EventArgs e)
+        {
+            
+            
+            string sql = "INSERT INTO `chairexperiment`.`experiment1` (`ID`  ,`subjectID` ,`anchor `,`frequency`,`response`) VALUES (NULL , '" + ID + "', '200' '" + currentTestFrequency + "', 'LOWER')";
+
+            OdbcCommand command = mysqlConnection.CreateCommand();
+            command.CommandText = sql;
+
+            try
+            {
+                int hr = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            nextTrial();
+        }
+
+       
 
 
     }

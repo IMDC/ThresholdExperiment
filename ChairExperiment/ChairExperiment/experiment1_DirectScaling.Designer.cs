@@ -80,12 +80,9 @@ namespace ChairExperiment
             this.signalGen2 = new Mitov.AudioLab.SignalGen(this.components);
             this.channelMerger1 = new Mitov.AudioLab.ChannelMerger(this.components);
             this.amplifier2 = new Mitov.AudioLab.Amplifier(this.components);
-            this.buttonExampleof2 = new System.Windows.Forms.Button();
-            this.buttonExampleof8 = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.textBoxRating = new System.Windows.Forms.TextBox();
-            this.buttonAcceptRating = new System.Windows.Forms.Button();
-            this.labelEnterText = new System.Windows.Forms.Label();
+            this.buttonHigher = new System.Windows.Forms.Button();
+            this.buttonLower = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.signalGen1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.audioToReal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAudioOut1)).BeginInit();
@@ -99,7 +96,7 @@ namespace ChairExperiment
             // buttonStartVibration
             // 
             this.buttonStartVibration.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStartVibration.Location = new System.Drawing.Point(165, 126);
+            this.buttonStartVibration.Location = new System.Drawing.Point(129, 121);
             this.buttonStartVibration.Name = "buttonStartVibration";
             this.buttonStartVibration.Size = new System.Drawing.Size(371, 162);
             this.buttonStartVibration.TabIndex = 6;
@@ -111,7 +108,7 @@ namespace ChairExperiment
             // 
             this.labelSession.AutoSize = true;
             this.labelSession.Font = new System.Drawing.Font("Verdana", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSession.Location = new System.Drawing.Point(233, 26);
+            this.labelSession.Location = new System.Drawing.Point(203, 47);
             this.labelSession.Name = "labelSession";
             this.labelSession.Size = new System.Drawing.Size(229, 52);
             this.labelSession.TabIndex = 12;
@@ -245,77 +242,40 @@ namespace ChairExperiment
             sourcePin5.ConnectionData = ((OpenWire.PinConnections)(resources.GetObject("sourcePin5.ConnectionData")));
             this.amplifier2.OutputPin = sourcePin5;
             // 
-            // buttonExampleof2
-            // 
-            this.buttonExampleof2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExampleof2.Location = new System.Drawing.Point(12, 12);
-            this.buttonExampleof2.Name = "buttonExampleof2";
-            this.buttonExampleof2.Size = new System.Drawing.Size(172, 72);
-            this.buttonExampleof2.TabIndex = 23;
-            this.buttonExampleof2.Text = "Example of a 2";
-            this.buttonExampleof2.UseVisualStyleBackColor = true;
-            this.buttonExampleof2.Click += new System.EventHandler(this.buttonExampleof2_Click);
-            // 
-            // buttonExampleof8
-            // 
-            this.buttonExampleof8.Enabled = false;
-            this.buttonExampleof8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExampleof8.Location = new System.Drawing.Point(12, 90);
-            this.buttonExampleof8.Name = "buttonExampleof8";
-            this.buttonExampleof8.Size = new System.Drawing.Size(172, 76);
-            this.buttonExampleof8.TabIndex = 24;
-            this.buttonExampleof8.Text = "Example of an 8";
-            this.buttonExampleof8.UseVisualStyleBackColor = true;
-            this.buttonExampleof8.Click += new System.EventHandler(this.buttonExampleof8_Click);
-            // 
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // textBoxRating
+            // buttonHigher
             // 
-            this.textBoxRating.Enabled = false;
-            this.textBoxRating.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRating.Location = new System.Drawing.Point(165, 338);
-            this.textBoxRating.Name = "textBoxRating";
-            this.textBoxRating.Size = new System.Drawing.Size(371, 44);
-            this.textBoxRating.TabIndex = 25;
-            this.textBoxRating.Visible = false;
+            this.buttonHigher.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHigher.Location = new System.Drawing.Point(338, 307);
+            this.buttonHigher.Name = "buttonHigher";
+            this.buttonHigher.Size = new System.Drawing.Size(162, 147);
+            this.buttonHigher.TabIndex = 44;
+            this.buttonHigher.Text = "HIGHER";
+            this.buttonHigher.UseVisualStyleBackColor = true;
+            this.buttonHigher.Click += new System.EventHandler(this.buttonHigher_Click);
             // 
-            // buttonAcceptRating
+            // buttonLower
             // 
-            this.buttonAcceptRating.Enabled = false;
-            this.buttonAcceptRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAcceptRating.Location = new System.Drawing.Point(228, 388);
-            this.buttonAcceptRating.Name = "buttonAcceptRating";
-            this.buttonAcceptRating.Size = new System.Drawing.Size(226, 108);
-            this.buttonAcceptRating.TabIndex = 26;
-            this.buttonAcceptRating.Text = "Accept Rating";
-            this.buttonAcceptRating.UseVisualStyleBackColor = true;
-            this.buttonAcceptRating.Visible = false;
-            this.buttonAcceptRating.Click += new System.EventHandler(this.buttonAcceptRating_Click);
-            // 
-            // labelEnterText
-            // 
-            this.labelEnterText.AutoSize = true;
-            this.labelEnterText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEnterText.Location = new System.Drawing.Point(197, 295);
-            this.labelEnterText.Name = "labelEnterText";
-            this.labelEnterText.Size = new System.Drawing.Size(323, 37);
-            this.labelEnterText.TabIndex = 27;
-            this.labelEnterText.Text = "Enter Reponse Below";
-            this.labelEnterText.Visible = false;
+            this.buttonLower.Enabled = false;
+            this.buttonLower.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLower.Location = new System.Drawing.Point(129, 307);
+            this.buttonLower.Name = "buttonLower";
+            this.buttonLower.Size = new System.Drawing.Size(166, 147);
+            this.buttonLower.TabIndex = 42;
+            this.buttonLower.Text = "LOWER";
+            this.buttonLower.UseVisualStyleBackColor = true;
+            this.buttonLower.Click += new System.EventHandler(this.buttonLower_Click);
             // 
             // experiment1_DirectScaling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 514);
-            this.Controls.Add(this.labelEnterText);
-            this.Controls.Add(this.buttonAcceptRating);
-            this.Controls.Add(this.textBoxRating);
-            this.Controls.Add(this.buttonExampleof8);
-            this.Controls.Add(this.buttonExampleof2);
+            this.ClientSize = new System.Drawing.Size(648, 537);
+            this.Controls.Add(this.buttonHigher);
+            this.Controls.Add(this.buttonLower);
             this.Controls.Add(this.labelSession);
             this.Controls.Add(this.buttonStartVibration);
             this.Name = "experiment1_DirectScaling";
@@ -346,11 +306,8 @@ namespace ChairExperiment
         public Mitov.AudioLab.SignalGen signalGen2;
         public Mitov.AudioLab.ChannelMerger channelMerger1;
         public Mitov.AudioLab.Amplifier amplifier2;
-        private System.Windows.Forms.Button buttonExampleof2;
-        private System.Windows.Forms.Button buttonExampleof8;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.TextBox textBoxRating;
-        private System.Windows.Forms.Button buttonAcceptRating;
-        private System.Windows.Forms.Label labelEnterText;
+        private System.Windows.Forms.Button buttonHigher;
+        private System.Windows.Forms.Button buttonLower;
     }
 }
