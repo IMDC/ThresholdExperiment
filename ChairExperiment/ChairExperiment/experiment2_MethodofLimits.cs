@@ -16,7 +16,7 @@ using System.Collections;
 namespace ChairExperiment
 {
     
-    public partial class subjectWindow : Form
+    public partial class experiment2_MethodofLimits : Form
     {
 
         private OdbcConnection mysqlConnection;
@@ -66,7 +66,7 @@ namespace ChairExperiment
 
         Form internalForm;
 
-        public subjectWindow()
+        public experiment2_MethodofLimits()
         {
 
             InitializeComponent();
@@ -260,7 +260,7 @@ namespace ChairExperiment
 
 
 
-            this.buttonPlay1.Enabled = true;
+            this.buttonStartComparison.Enabled = true;
 
             //correctHigh = 0;
 
@@ -349,7 +349,7 @@ namespace ChairExperiment
             this.buttonFaster.Enabled = false;
             this.buttonSlower.Enabled = false;
 
-            this.buttonPlay1.Enabled = true;
+            this.buttonStartComparison.Enabled = true;
             checkBreak();
 
         }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChairExperiment", "ChairExperiment\ChairExperiment.csproj", "{180C5A36-44C4-4755-BE74-93ECC851F3F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment1", "ChairExperiment\Assignment1.csproj", "{180C5A36-44C4-4755-BE74-93ECC851F3F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
