@@ -10,8 +10,8 @@ using System.Data.Odbc;
 using System.IO;
 using DirectShowLib;
 using System.Collections;
-//using Mitov.SignalLab;
-//using Mitov.PlotLab;
+using Mitov.SignalLab;
+using Mitov.PlotLab;
 
 namespace ChairExperiment
 {
@@ -73,7 +73,9 @@ namespace ChairExperiment
         double[] subjectiveIntensityValues = new double[20];
 
         Random random = new Random(DateTime.UtcNow.Millisecond);
-       
+
+        ArrayList usedStimuli = new ArrayList();
+
 
         public  experiment1_DirectScaling()
         {
@@ -205,6 +207,19 @@ namespace ChairExperiment
             ((System.ComponentModel.ISupportInitialize)(this.channelMerger1)).EndInit();
             
             int index = random.Next(0, 20);
+
+            while(usedStimuli.Contains(index))
+            {
+                index = random.Next(0, 20);
+            }
+
+            usedStimuli.Add(index);
+
+            if (usedStimuli.Count >= 20)
+            {
+                usedStimuli = new ArrayList();
+            }
+
             currentTestFrequency = comparisonFrequencies[index];
 
                 
