@@ -11,13 +11,13 @@ namespace ChairExperiment
     public partial class BreakTimer : Form
     {
         int seconds = 120;
-        subjectWindow localSubject;
+        experiment2_MethodofLimits localSubject;
         public BreakTimer()
         {
             InitializeComponent();
         }
 
-        public void startTimer(subjectWindow subjectwindow)
+        public void startTimer(experiment2_MethodofLimits subjectwindow)
         {
             this.localSubject = subjectwindow;
             this.timer1.Start();

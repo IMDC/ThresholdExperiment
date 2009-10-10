@@ -24,7 +24,7 @@ namespace ChairExperiment
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            /*string sex = "";
+            string sex = "";
             string age = "";
             string computer = "";
             string handedness = "";
@@ -101,7 +101,7 @@ namespace ChairExperiment
             {
                 speakerside = "Right";
             }
-            /*
+            
             string server = "DRIVER={MySQL ODBC 3.51 Driver};" + "SERVER=141.117.145.50;" + "DATABASE=livedescribe;" + "UID=livedescribe;" + "PWD=livedescribe;" + "OPTION=3;";// builder.ConnectionString;
 
             string sql = "INSERT INTO `chairexperiment`.`subjects` (`ID`  ,`sex` ,`age`,`experience`, `handedness`, `speakerside`) VALUES (NULL , '" + sex + "', '" + age + "', '" + computer + "', '" + handedness + "', '" + speakerside + "')";
@@ -113,14 +113,16 @@ namespace ChairExperiment
             {
                 mysqlConnection = new OdbcConnection(server);
                 mysqlConnection.Open();
+
+                this.Text = "Successful connection!!";
             }
             catch (Exception ex)
             {
                 this.Text = "Connection failed . . . ";
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
-            this.Text = "Successful connection!!";
+            
 
 
             OdbcCommand command = mysqlConnection.CreateCommand();
@@ -145,28 +147,29 @@ namespace ChairExperiment
             
 
             this.Hide();
-             */
-            int ID = 0; //DELETE THIS
-            subjectWindow start = new subjectWindow();
+             
+            //int ID = 0; //DELETE THIS
+            //subjectWindow start = new subjectWindow();
+            experiment1_DirectScaling start = new experiment1_DirectScaling();
             administratorWindow admin = new administratorWindow();
-            CalibrationForm calibrate = new CalibrationForm();
+            //CalibrationForm calibrate = new CalibrationForm();
 
-            calibrate.linkForms(start);
+            //calibrate.linkForms(start);
 
             //calibrate.Show();
            // calibrate.link(start);
             start.link(mysqlConnection, ID, admin);
             start.Show();
-            calibrate.Show();
+            //calibrate.Show();
            
             //Array screens = System.Windows.Forms.Screen.AllScreens();
 
 
 
 
-            admin.Left = 200;
-            admin.Update();
-            admin.Show();
+            //admin.Left = 200;
+            //admin.Update();
+            //admin.Show();
 
 
 
