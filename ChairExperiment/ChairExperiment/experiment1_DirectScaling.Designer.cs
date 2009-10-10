@@ -280,6 +280,7 @@ namespace ChairExperiment
             this.Controls.Add(this.buttonStartVibration);
             this.Name = "experiment1_DirectScaling";
             this.Text = "Experiment 1 - Direct Scaling";
+           
             ((System.ComponentModel.ISupportInitialize)(this.signalGen1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.audioToReal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAudioOut1)).EndInit();

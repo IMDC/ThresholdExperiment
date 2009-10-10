@@ -51,7 +51,7 @@ namespace ChairExperiment
 
         int counter = 0;
         int localSession = 0;
-        int anchor = 0;
+        //int anchor = 0;
 
         int correctHigh = 0;
         int correctLow = 0;
@@ -76,6 +76,8 @@ namespace ChairExperiment
 
         ArrayList usedStimuli = new ArrayList();
 
+        int anchor = 200;
+
 
         public  experiment1_DirectScaling()
         {
@@ -83,29 +85,33 @@ namespace ChairExperiment
             InitializeComponent();
             this.signalGen1.Stop();
 
-            comparisonFrequencies[0] = 100;
-            comparisonFrequencies[1] = 140;
-            comparisonFrequencies[2] = 180;
-            comparisonFrequencies[3] = 220;
-            comparisonFrequencies[4] = 260;
-            comparisonFrequencies[5] = 300;
-            comparisonFrequencies[6] = 340;
-            comparisonFrequencies[7] = 380;
-            comparisonFrequencies[8] = 420;
-            comparisonFrequencies[9] = 460;
-            comparisonFrequencies[10] = 500;
+            comparisonFrequencies[0] = 230;
+            comparisonFrequencies[1] = 225;
+            comparisonFrequencies[2] = 220;
+            comparisonFrequencies[3] = 215;
+            comparisonFrequencies[4] = 210;
+            comparisonFrequencies[5] = 205;
+            comparisonFrequencies[6] = 200;
+            comparisonFrequencies[7] = 195;
+            comparisonFrequencies[8] = 190;
+            comparisonFrequencies[9] = 185;
+            comparisonFrequencies[10] = 180;
+            comparisonFrequencies[11] = 175;
+            comparisonFrequencies[12] = 170;
 
-            subjectiveIntensityValues[0] = 0.75;
-            subjectiveIntensityValues[1] = 0.75;
-            subjectiveIntensityValues[2] = 0.75;
-            subjectiveIntensityValues[3] = 0.8;
+            subjectiveIntensityValues[0] = 0.9;
+            subjectiveIntensityValues[1] = 0.9;
+            subjectiveIntensityValues[2] = 0.9;
+            subjectiveIntensityValues[3] = 0.9;
             subjectiveIntensityValues[4] = 1.0;
-            subjectiveIntensityValues[5] = 1.1;
-            subjectiveIntensityValues[6] = 1.1;
-            subjectiveIntensityValues[7] = 1.2;
-            subjectiveIntensityValues[8] = 1.2;
-            subjectiveIntensityValues[9] = 1.3;
-            subjectiveIntensityValues[10] = 1.3;
+            subjectiveIntensityValues[5] = 1.0;
+            subjectiveIntensityValues[6] = 1.0;
+            subjectiveIntensityValues[7] = 1.0;
+            subjectiveIntensityValues[8] = 1.0;
+            subjectiveIntensityValues[9] = 1.1;
+            subjectiveIntensityValues[10] = 1.1; 
+            subjectiveIntensityValues[11] = 1.1;
+            subjectiveIntensityValues[12] = 1.1;
 
 
             showAll();
@@ -203,7 +209,7 @@ namespace ChairExperiment
             buttonStartVibration.Enabled = false;
             ((System.ComponentModel.ISupportInitialize)(this.channelMerger1)).EndInit();
             
-            int index = random.Next(0, 11);
+            int index = random.Next(0, 13);
 
            
 
@@ -213,7 +219,7 @@ namespace ChairExperiment
                 
                 
                 
-            this.signalGen1.Frequency = currentTestFrequency;
+            this.signalGen1.Frequency = anchor;
 
 
 
@@ -343,19 +349,7 @@ namespace ChairExperiment
             disableButtons();
             this.buttonStartVibration.Enabled = true;
             
-            this.buttonAcceptRating.Enabled = false;
-            this.button2.Enabled = false;
-            this.button1.Enabled = false;
-            this.button7.Enabled = false;
-            this.button8.Enabled = false;
-            this.button11.Enabled = false;
-            this.button12.Enabled = false;
-            this.button13.Enabled = false;
-            this.button14.Enabled = false;
-            this.buttonLower.Enabled = false;
-            this.button18.Enabled = false;
-            this.button21.Enabled = false;
-            this.button22.Enabled = false;
+  
             //checkBreak();
             session++;
             this.labelSession.Text = "Session " + session;
@@ -482,7 +476,7 @@ namespace ChairExperiment
             if (counter == 30)
             {
                 this.signalGen1.Stop();
-                this.timer1.Stop();
+                //this.timer1.Stop();
                 
 
                 
@@ -495,6 +489,23 @@ namespace ChairExperiment
 
 
             }
+            if (counter == 40)
+            {
+                this.signalGen1.Start;
+                //this.timer1.Stop();
+
+
+
+                this.buttonStartVibration.Enabled = false;
+
+
+
+                counter = 0;
+
+
+
+            }
+
 
         }
         private void timer2_Tick(object sender, EventArgs e)
@@ -576,6 +587,8 @@ namespace ChairExperiment
 
             nextTrial();
         }
+
+
 
        
 
