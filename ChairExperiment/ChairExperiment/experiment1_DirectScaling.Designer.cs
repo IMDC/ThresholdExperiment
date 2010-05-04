@@ -146,14 +146,14 @@ namespace ChairExperiment
             // dsAudioOut1
             // 
             dsAudioOutputDevice1.DeviceName = "Default";
-            dsAudioOutputDevice1.InternalData = ((Vcl.VclBinaryData)(resources.GetObject("dsAudioOutputDevice1.InternalData")));
+            //dsAudioOutputDevice1.InternalData = ((Vcl.VclBinaryData)(resources.GetObject("dsAudioOutputDevice1.InternalData")));
             this.dsAudioOut1.AudioOutputDevice = dsAudioOutputDevice1;
             statePin3.ConnectionData = ((OpenWire.PinConnections)(resources.GetObject("statePin3.ConnectionData")));
             this.dsAudioOut1.EnablePin = statePin3;
             this.dsAudioOut1.Graph = dsGraph1;
             sinkPin3.ConnectionData = ((OpenWire.PinConnections)(resources.GetObject("sinkPin3.ConnectionData")));
             this.dsAudioOut1.InputPin = sinkPin3;
-            this.dsAudioOut1.InternalData = ((Vcl.VclBinaryData)(resources.GetObject("dsAudioOut1.InternalData")));
+            //this.dsAudioOut1.InternalData = ((Vcl.VclBinaryData)(resources.GetObject("dsAudioOut1.InternalData")));
             this.dsAudioOut1.MasterPumping = masterPumping1;
             this.dsAudioOut1.PrefillInterval = ((uint)(300u));
             // 
@@ -187,7 +187,7 @@ namespace ChairExperiment
             this.amplifier1.EnablePin = sinkPin4;
             sinkPin5.ConnectionData = ((OpenWire.PinConnections)(resources.GetObject("sinkPin5.ConnectionData")));
             this.amplifier1.InputPin = sinkPin5;
-            this.amplifier1.InternalData = ((Vcl.VclBinaryData)(resources.GetObject("amplifier1.InternalData")));
+            //this.amplifier1.InternalData = ((Vcl.VclBinaryData)(resources.GetObject("amplifier1.InternalData")));
             sourcePin2.ConnectionData = ((OpenWire.PinConnections)(resources.GetObject("sourcePin2.ConnectionData")));
             this.amplifier1.OutputPin = sourcePin2;
             // 
@@ -227,7 +227,7 @@ namespace ChairExperiment
             this.channelMerger1.AudioFormat = optionalAudioFormat1;
             pinList10.ConnectionData = ((OpenWire.PinConnections)(resources.GetObject("pinList10.ConnectionData")));
             this.channelMerger1.InputPins = pinList10;
-            this.channelMerger1.InternalData = ((Vcl.VclBinaryData)(resources.GetObject("channelMerger1.InternalData")));
+            //this.channelMerger1.InternalData = ((Vcl.VclBinaryData)(resources.GetObject("channelMerger1.InternalData")));
             sourcePin4.ConnectionData = ((OpenWire.PinConnections)(resources.GetObject("sourcePin4.ConnectionData")));
             this.channelMerger1.OutputPin = sourcePin4;
             // 
@@ -238,7 +238,7 @@ namespace ChairExperiment
             this.amplifier2.EnablePin = sinkPin7;
             sinkPin8.ConnectionData = ((OpenWire.PinConnections)(resources.GetObject("sinkPin8.ConnectionData")));
             this.amplifier2.InputPin = sinkPin8;
-            this.amplifier2.InternalData = ((Vcl.VclBinaryData)(resources.GetObject("amplifier2.InternalData")));
+            //this.amplifier2.InternalData = ((Vcl.VclBinaryData)(resources.GetObject("amplifier2.InternalData")));
             sourcePin5.ConnectionData = ((OpenWire.PinConnections)(resources.GetObject("sourcePin5.ConnectionData")));
             this.amplifier2.OutputPin = sourcePin5;
             // 
@@ -280,7 +280,7 @@ namespace ChairExperiment
             this.Controls.Add(this.buttonStartVibration);
             this.Name = "experiment1_DirectScaling";
             this.Text = "Experiment 1 - Direct Scaling";
-           
+            //this.Load += new System.EventHandler(this.experiment1_DirectScaling_Load);
             ((System.ComponentModel.ISupportInitialize)(this.signalGen1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.audioToReal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAudioOut1)).EndInit();

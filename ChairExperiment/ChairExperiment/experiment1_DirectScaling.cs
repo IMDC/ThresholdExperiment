@@ -363,7 +363,7 @@ namespace ChairExperiment
 
         public void disableButtons(){
             
-            this.buttonAcceptRating.Enabled = false;
+            //this.buttonAcceptRating.Enabled = false;
 
         }
         //public void enableButtons()
@@ -389,9 +389,7 @@ namespace ChairExperiment
             this.buttonStartVibration.Visible = true;
             
             
-            this.buttonAcceptRating.Visible = true;
-            this.button1.Visible = true;
-            this.button2.Visible = true;
+            
             
             //this.Controls.Remove(this.buttonExampleof2);
             //this.Controls.Remove(this.buttonExampleof8);
@@ -491,7 +489,7 @@ namespace ChairExperiment
             }
             if (counter == 40)
             {
-                this.signalGen1.Start;
+                //this.signalGen1.Start;
                 //this.timer1.Stop();
 
 
@@ -587,6 +585,8 @@ namespace ChairExperiment
 
             nextTrial();
         }
+
+
 
 
 
